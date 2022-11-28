@@ -46,4 +46,42 @@ interface IRequest extends \JsonSerializable
      * @throws \Gomoob\Pushwoosh\Exception\PushwooshException If the `auth` property is not supported by the request.
      */
     public function setAuth($auth);
+
+
+    /**
+     * Sets the Pushwoosh application ID where to send the message to (cannot be used together with "applicationsGroup")
+     * .
+     *
+     * @param string $application the Pushwoosh application ID where to send the message to (cannot be used together
+     *        with "applicationsGroup").
+     *
+     * @return \Gomoob\Pushwoosh\Model\Request\CreateMessageRequest this instance.
+     */
+    public function setApplication($application);
+
+    /**
+     * Sets the Pushwoosh Application group code (cannot be used together with "application").
+     *
+     * @param string $applicationsGroup the Pushwoosh Application group code (cannot be used together with
+     *        "application").
+     *
+     * @return \Gomoob\Pushwoosh\Model\Request\CreateMessageRequest this instance.
+     */
+    public function setApplicationsGroup($applicationsGroup);
+
+    /**
+     * Gets the Pushwoosh application ID where to send the message to (cannot be used together with "applicationsGroup")
+     * .
+     *
+     * @return string the Pushwoosh application ID where to send the message to (cannot be used together with
+     *         "applicationsGroup").
+     */
+    public function getApplication();
+
+    /**
+     * Gets the Pushwoosh Application group code (cannot be used together with "application").
+     *
+     * @return string the Pushwoosh Application group code (cannot be used together with "application").
+     */
+    public function getApplicationsGroup();
 }

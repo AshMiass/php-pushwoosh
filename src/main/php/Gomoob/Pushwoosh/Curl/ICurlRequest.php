@@ -111,7 +111,7 @@ interface ICurlRequest
      *         Note that private data is not included in the associative array and must be retrieved individually with
      *         the CURLINFO_PRIVATE option.
      */
-    public function getInfo($opt = CURLINFO_EFFECTIVE_URL0);
+    public function getInfo($opt = CURLINFO_EFFECTIVE_URL);
 
     /**
      * Set an option for a cURL transfer.
@@ -122,4 +122,13 @@ interface ICurlRequest
      * @return bool Returns TRUE on success or FALSE on failure.
      */
     public function setOpt($option, $value);
+
+    /**
+     * Initialize a cURL session.
+     *
+     * @param string $url If provided, the CURLOPT_URL option will be set to its value.
+     *
+     * @throws \Exception If the provided URL is not valid.
+     */
+    public function init(?string $url);
 }

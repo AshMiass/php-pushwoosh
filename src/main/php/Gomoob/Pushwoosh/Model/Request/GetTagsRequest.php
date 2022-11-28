@@ -17,12 +17,6 @@ use Gomoob\Pushwoosh\Exception\PushwooshException;
  */
 class GetTagsRequest extends AbstractRequest
 {
-    /**
-     * The Pushwoosh application ID where to send the message to (cannot be used together with "applicationsGroup").
-     *
-     * @var string
-     */
-    private $application;
 
     /**
      * The hardware device id used in registerDevice function call.

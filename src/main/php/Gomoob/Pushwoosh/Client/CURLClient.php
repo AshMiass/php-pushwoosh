@@ -248,7 +248,7 @@ class CURLClient implements ICURLClient
         $mergedCurlOpts[CURLOPT_POSTFIELDS] = $request;
         $mergedCurlOpts[CURLOPT_HTTPHEADER] = [
             'Content-Type: application/json',
-            'Content-Length: ' . strlen($request)
+            'Content-Length: ' . mb_strlen(serialize((array) $request), '8bit')
         ];
 
         return $mergedCurlOpts;

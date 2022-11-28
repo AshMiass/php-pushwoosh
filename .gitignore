@@ -5,3 +5,5 @@
 /Gemfile.lock
 /phpdocumentor/
 /build/
+phpunit.xml
+Dockerfile

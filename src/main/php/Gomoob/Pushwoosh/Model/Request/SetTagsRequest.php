@@ -17,12 +17,6 @@ use Gomoob\Pushwoosh\Exception\PushwooshException;
  */
 class SetTagsRequest extends AbstractRequest
 {
-    /**
-     * The Pushwoosh application ID for which one to set tags.
-     *
-     * @var string
-     */
-    private $application;
 
     /**
      * The Unique string to identify the device (Please note that accessing UDID on iOS is deprecated and not allowed,

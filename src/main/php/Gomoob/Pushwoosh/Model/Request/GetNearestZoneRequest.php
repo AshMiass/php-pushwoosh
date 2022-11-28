@@ -17,12 +17,6 @@ use Gomoob\Pushwoosh\Exception\PushwooshException;
  */
 class GetNearestZoneRequest extends AbstractRequest
 {
-    /**
-     * The Pushwoosh application ID where you send the message to.
-     *
-     * @var string
-     */
-    private $application;
 
     /**
      * The hardware device id used in registerDevice function call.

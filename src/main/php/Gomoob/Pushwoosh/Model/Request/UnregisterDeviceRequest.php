@@ -18,13 +18,6 @@ use Gomoob\Pushwoosh\Exception\PushwooshException;
 class UnregisterDeviceRequest extends AbstractRequest
 {
     /**
-     * The Pushwoosh application ID for which one to register a new device.
-     *
-     * @var string
-     */
-    private $application;
-
-    /**
      * The Unique string to identify the device (Please note that accessing UDID on iOS is deprecated and not allowed,
      * one of the alternative ways now is to use MAC address).
      *

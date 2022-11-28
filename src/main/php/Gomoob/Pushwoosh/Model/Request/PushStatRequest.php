@@ -17,12 +17,6 @@ use Gomoob\Pushwoosh\Exception\PushwooshException;
  */
 class PushStatRequest extends AbstractRequest
 {
-    /**
-     * The Pushwoosh application ID where you send the message to.
-     *
-     * @var string
-     */
-    private $application;
 
     /**
      * The tag received in push notification.

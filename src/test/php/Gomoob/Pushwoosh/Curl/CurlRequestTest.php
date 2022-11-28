@@ -30,10 +30,10 @@ class CurlRequestTest extends TestCase
         $this->assertNotNull($curlRequest);
 
         // Test with a valid URL provided
-        $curlRequest = new CurlRequest('https://www.gomoob.com');
+        $curlRequest = new CurlRequest('https://github.com/gomoob/php-pushwoosh');
         $this->assertNotNull($curlRequest);
 
-        // Test with a bad URL provided
+        // Test with a bad URL providedhttps://github.com/gomoob/php-pushwoosh
         try {
             new CurlRequest('bad');
             $this->fail('Must have thrown an Exception !');
@@ -60,7 +60,7 @@ class CurlRequestTest extends TestCase
         }
 
         // Test with a CURL request having a handle
-        $curlRequest = new CurlRequest('https://www.gomoob.com');
+        $curlRequest = new CurlRequest('https://github.com/gomoob/php-pushwoosh');
         $curlRequest->close();
     }
 
@@ -82,7 +82,7 @@ class CurlRequestTest extends TestCase
         }
 
         // Test with a CURL request having a handle
-        $curlRequest = new CurlRequest('https://www.gomoob.com');
+        $curlRequest = new CurlRequest('https://github.com/gomoob/php-pushwoosh');
         $error = $curlRequest->error();
         $this->assertSame('', $error);
     }
@@ -105,7 +105,7 @@ class CurlRequestTest extends TestCase
         }
 
         // Test with a CURL request having a handle
-        $curlRequest = new CurlRequest('https://www.gomoob.com');
+        $curlRequest = new CurlRequest('https://github.com/gomoob/php-pushwoosh');
 
         // see: http://curl.haxx.se/docs/sslcerts.html
         $curlRequest->setOpt(CURLOPT_RETURNTRANSFER, true);
@@ -114,7 +114,7 @@ class CurlRequestTest extends TestCase
         $curlRequest->setOpt(CURLOPT_SSL_VERIFYPEER, true);
 
         $result = $curlRequest->exec();
-        $this->assertRegexp('/GoMoob/', $result);
+        $this->assertRegexp('/gomoob/', $result);
     }
 
     /**
@@ -129,7 +129,7 @@ class CurlRequestTest extends TestCase
         $curlRequest->init();
 
         // Test with no URL provided and a CURL handle initilized after construct
-        $curlRequest = new CurlRequest('https://www.gomoob.com');
+        $curlRequest = new CurlRequest('https://github.com/gomoob/php-pushwoosh');
         $curlRequest->init();
 
         // Test with a bad URL provided
@@ -141,7 +141,7 @@ class CurlRequestTest extends TestCase
         }
 
         // Test with a good URL provided
-        $curlRequest->init('https://www.gomoob.com');
+        $curlRequest->init('https://github.com/gomoob/php-pushwoosh');
     }
 
     /**
@@ -162,7 +162,7 @@ class CurlRequestTest extends TestCase
         }
 
         // Test with no parameter provided
-        $curlRequest = new CurlRequest('https://www.gomoob.com');
+        $curlRequest = new CurlRequest('https://github.com/gomoob/php-pushwoosh');
 
         // see: http://curl.haxx.se/docs/sslcerts.html
         $curlRequest->setOpt(CURLOPT_RETURNTRANSFER, true);
@@ -171,7 +171,7 @@ class CurlRequestTest extends TestCase
         $curlRequest->setOpt(CURLOPT_SSL_VERIFYPEER, true);
 
         $result = $curlRequest->getInfo();
-        $this->assertSame('https://www.gomoob.com', $result);
+        $this->assertSame('https://github.com/gomoob/php-pushwoosh', $result);
 
         // Test with a parameter
         $result = $curlRequest->getInfo(CURLINFO_LOCAL_PORT);

@@ -18,13 +18,6 @@ use Gomoob\Pushwoosh\Exception\PushwooshException;
 class SetBadgeRequest extends AbstractRequest
 {
     /**
-     * The Pushwoosh application ID where to send the message to (cannot be used together with "applicationsGroup").
-     *
-     * @var string
-     */
-    private $application;
-
-    /**
      * The current badge on the application to use with auto-incrementing badges.
      *
      * @var int

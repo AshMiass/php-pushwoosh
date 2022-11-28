@@ -37,11 +37,11 @@ class CurlRequest implements ICurlRequest
     /**
      * Initialize a cURL session.
      *
-     * @param string $url If provided, the CURLOPT_URL option will be set to its value.
+     * @param string|null $url If provided, the CURLOPT_URL option will be set to its value.
      *
      * @throws \Exception If the provided URL is not valid.
      */
-    public function __construct($url = null)
+    public function __construct(?string $url = null)
     {
         $this->init($url);
     }
@@ -86,7 +86,7 @@ class CurlRequest implements ICurlRequest
         if (isset($url)) {
             // The provided URL must be valid
             if (!$this->isUrlValid($url)) {
-                throw new \Exception('Invalid URL provided \'' . $url . '\' !', -1, null);
+                throw new \Exception('Invalid URL provided \'' . $url . '\' !', -1);
             }
 
             $this->ch = curl_init($url);

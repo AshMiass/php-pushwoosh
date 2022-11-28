@@ -17,12 +17,6 @@ use Gomoob\Pushwoosh\Exception\PushwooshException;
  */
 class RegisterDeviceRequest extends AbstractRequest
 {
-    /**
-     * The Pushwoosh application ID for which one to register a new device.
-     *
-     * @var string
-     */
-    private $application;
 
     /**
      * The device type, this attribute can take the following values :

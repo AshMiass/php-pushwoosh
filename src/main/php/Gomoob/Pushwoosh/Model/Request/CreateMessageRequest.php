@@ -19,20 +19,7 @@ use Gomoob\Pushwoosh\Model\Notification\Notification;
  */
 class CreateMessageRequest extends AbstractRequest
 {
-    /**
-     * The Pushwoosh application ID where to send the message to (cannot be used together with "applicationsGroup").
-     *
-     * @var string
-     */
-    private $application;
-
-    /**
-     * The Pushwoosh Application group code (cannot be used together with "application").
-     *
-     * @var string
-     */
-    private $applicationsGroup;
-
+   
     /**
      * The Pushwoosh notifications to attach to the create message request.
      *
@@ -68,27 +55,6 @@ class CreateMessageRequest extends AbstractRequest
         return $this;
     }
 
-    /**
-     * Gets the Pushwoosh application ID where to send the message to (cannot be used together with "applicationsGroup")
-     * .
-     *
-     * @return string the Pushwoosh application ID where to send the message to (cannot be used together with
-     *         "applicationsGroup").
-     */
-    public function getApplication()
-    {
-        return $this->application;
-    }
-
-    /**
-     * Gets the Pushwoosh Application group code (cannot be used together with "application").
-     *
-     * @return string the Pushwoosh Application group code (cannot be used together with "application").
-     */
-    public function getApplicationsGroup()
-    {
-        return $this->applicationsGroup;
-    }
 
     /**
      * Gets the Pushwoosh notifications to attach to the create message request.
@@ -147,38 +113,7 @@ class CreateMessageRequest extends AbstractRequest
 
         return $json;
     }
-
-    /**
-     * Sets the Pushwoosh application ID where to send the message to (cannot be used together with "applicationsGroup")
-     * .
-     *
-     * @param string $application the Pushwoosh application ID where to send the message to (cannot be used together
-     *        with "applicationsGroup").
-     *
-     * @return \Gomoob\Pushwoosh\Model\Request\CreateMessageRequest this instance.
-     */
-    public function setApplication($application)
-    {
-        $this->application = $application;
-
-        return $this;
-    }
-
-    /**
-     * Sets the Pushwoosh Application group code (cannot be used together with "application").
-     *
-     * @param string $applicationsGroup the Pushwoosh Application group code (cannot be used together with
-     *        "application").
-     *
-     * @return \Gomoob\Pushwoosh\Model\Request\CreateMessageRequest this instance.
-     */
-    public function setApplicationsGroup($applicationsGroup)
-    {
-        $this->applicationsGroup = $applicationsGroup;
-
-        return $this;
-    }
-
+    
     /**
      * Sets the Pushwoosh notifications to attach to the create message request.
      *
